@@ -1,0 +1,12 @@
+[
+  {
+    "userId": "regex:[\\d]",
+    "id": "regex:[\\d]",
+    "title": "regex:[a-zA-Z\\d]+"
+  },
+  {
+    "userId": 1,
+    "id": 2,
+    "title": "sunt qui excepturi placeat culpa"
+  }
+]

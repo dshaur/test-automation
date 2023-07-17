@@ -1,0 +1,221 @@
+[2023-07-17 08:50:31] [1] [WARN] Reporting disabled: using no op test run registrar
+[2023-07-17 08:50:31] [1] [INFO] TEST [test-automation - testPatchAlbum] STARTED at [16:50:31 2023-07-17]
+[2023-07-17 08:50:32] [1] [INFO] Base properties loaded: api/albums/album.properties
+[2023-07-17 08:50:34] [1] [INFO] Request method:	POST
+Request URI:	https://jsonplaceholder.typicode.com/albums
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Cookies:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Body:
+[
+    {
+        "title": "txuohpotpp",
+        "userId": 1,
+        "id": 1
+    }
+]
+HTTP/1.1 201 Created
+Date: Mon, 17 Jul 2023 20:50:34 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 85
+Connection: keep-alive
+X-Powered-By: Express
+X-Ratelimit-Limit: 1000
+X-Ratelimit-Remaining: 999
+X-Ratelimit-Reset: 1689627089
+Vary: Origin, X-HTTP-Method-Override, Accept-Encoding
+Access-Control-Allow-Credentials: true
+Cache-Control: no-cache
+Pragma: no-cache
+Expires: -1
+Access-Control-Expose-Headers: Location
+Location: http://jsonplaceholder.typicode.com/albums/101
+X-Content-Type-Options: nosniff
+Etag: W/"55-WlvEj+uxgvxOUtHau+jXLoLbHow"
+Via: 1.1 vegur
+CF-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=XWgdTxLWaxFTgcYbhU2iePFBsmH3jgYkQqUI8TWxWcdnFP4IItI8uDi6beJ7Erx2f3c7a0wMZlYgfvNoZLGihm6fsLaNrxX3jGyV%2BUFRhs%2FXTlNLbKlsCh3UK3UKuecWJ4iFqPVohulESILaYeUf"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 7e855ba2ba6cacfd-ATL
+alt-svc: h3=":443"; ma=86400
+
+{
+    "0": {
+        "title": "txuohpotpp",
+        "userId": 1,
+        "id": 1
+    },
+    "id": 101
+}
+
+[2023-07-17 08:50:34] [1] [INFO] 1
+[2023-07-17 08:50:34] [1] [INFO] Base properties loaded: api/albums/album.properties
+[2023-07-17 08:50:35] [1] [INFO] Request method:	PATCH
+Request URI:	https://jsonplaceholder.typicode.com/albums
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	id=1
+Multiparts:		<none>
+Cookies:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Body:
+[
+    {
+        "title": "tvovosqwwo"
+    }
+]
+
+[2023-07-17 08:50:35] [1] [ERROR] TEST [test-automation - testPatchAlbum] FAILED at [16:50:35 2023-07-17] - Invalid number of path parameters. Expected 0, was 1. Redundant path parameters are: id=1.
+
+java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+io.restassured.internal.RequestSpecificationImpl.assertCorrectNumberOfPathParams(RequestSpecificationImpl.groovy:1248)
+java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+java.base/java.lang.reflect.Method.invoke(Method.java:578)
+org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1029)
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:816)
+groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
+org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
+org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:176)
+io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1135)
+java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+java.base/java.lang.reflect.Method.invoke(Method.java:578)
+org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1029)
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:816)
+groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
+org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+io.restassured.filter.Filter$filter$0.call(Unknown Source)
+org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+io.restassured.filter.Filter$filter.call(Unknown Source)
+io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+io.restassured.filter.Filter$filter.call(Unknown Source)
+org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+io.restassured.filter.Filter$filter.call(Unknown Source)
+io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+io.restassured.filter.log.StatusCodeBasedLoggingFilter.filter(StatusCodeBasedLoggingFilter.java:112)
+io.restassured.filter.log.ResponseLoggingFilter.filter(ResponseLoggingFilter.java:31)
+io.restassured.filter.Filter$filter.call(Unknown Source)
+org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+io.restassured.filter.Filter$filter.call(Unknown Source)
+io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+com.zebrunner.carina.api.log.CarinaResponseHeadersLoggingFilter.filter(CarinaResponseHeadersLoggingFilter.java:50)
+io.restassured.filter.Filter$filter.call(Unknown Source)
+org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+io.restassured.filter.Filter$filter.call(Unknown Source)
+io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+io.restassured.filter.log.StatusCodeBasedLoggingFilter.filter(StatusCodeBasedLoggingFilter.java:112)
+io.restassured.filter.log.ResponseLoggingFilter.filter(ResponseLoggingFilter.java:31)
+io.restassured.filter.Filter$filter.call(Unknown Source)
+io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+io.restassured.filter.log.StatusCodeBasedLoggingFilter.filter(StatusCodeBasedLoggingFilter.java:112)
+io.restassured.filter.log.ResponseLoggingFilter.filter(ResponseLoggingFilter.java:31)
+io.restassured.filter.Filter$filter.call(Unknown Source)
+org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+io.restassured.filter.Filter$filter.call(Unknown Source)
+io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:140)
+io.restassured.filter.Filter$filter.call(Unknown Source)
+io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:140)
+io.restassured.filter.Filter$filter.call(Unknown Source)
+io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:140)
+io.restassured.filter.Filter$filter.call(Unknown Source)
+io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:140)
+io.restassured.filter.Filter$filter.call(Unknown Source)
+io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:140)
+io.restassured.filter.Filter$filter.call(Unknown Source)
+io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:140)
+io.restassured.filter.Filter$filter.call(Unknown Source)
+org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+io.restassured.filter.Filter$filter$0.call(Unknown Source)
+io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+io.restassured.filter.FilterContext$next.call(Unknown Source)
+io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1655)
+java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+java.base/java.lang.reflect.Method.invoke(Method.java:578)
+org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1029)
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:816)
+groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
+org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
+org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1661)
+java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+java.base/java.lang.reflect.Method.invoke(Method.java:578)
+org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1029)
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:816)
+groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
+org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
+org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+io.restassured.internal.RequestSpecificationImpl.patch(RequestSpecificationImpl.groovy:191)
+io.restassured.internal.RequestSpecificationImpl.patch(RequestSpecificationImpl.groovy)
+com.zebrunner.carina.api.http.HttpClient.send(HttpClient.java:49)
+com.zebrunner.carina.api.AbstractApiMethod.callAPI(AbstractApiMethod.java:301)
+com.zebrunner.carina.api.AbstractApiMethodV2.callAPI(AbstractApiMethodV2.java:189)
+com.zebrunner.carina.api.AbstractApiMethod.callAPI(AbstractApiMethod.java:279)
+com.zebrunner.carina.api.AbstractApiMethodV2.callAPI(AbstractApiMethodV2.java:181)
+com.zebrunner.carina.api.AbstractApiMethodV2.callAPIExpectSuccess(AbstractApiMethodV2.java:215)
+com.solvd.carina.demo.AlbumsApiTest.testPatchAlbum(AlbumsApiTest.java:74)
+java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+java.base/java.lang.reflect.Method.invoke(Method.java:578)
+org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+org.testng.TestRunner.privateRun(TestRunner.java:829)
+org.testng.TestRunner.run(TestRunner.java:602)
+org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+org.testng.SuiteRunner.run(SuiteRunner.java:330)
+org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+org.testng.TestNG.runSuites(TestNG.java:1099)
+org.testng.TestNG.run(TestNG.java:1067)
+com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
