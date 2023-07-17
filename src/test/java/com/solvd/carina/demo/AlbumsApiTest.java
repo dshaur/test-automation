@@ -52,7 +52,7 @@ public class AlbumsApiTest implements IAbstractTest {
 
 
     // Test PATCH, first use POST call to create album and then use PATCH
-/*    @Test()
+    @Test()
     @MethodOwner(owner = "dshaur")
     public void testPatchAlbum() throws Exception {
         // Step 1: Create an album using POST call
@@ -70,6 +70,6 @@ public class AlbumsApiTest implements IAbstractTest {
         patchAlbumMethod.getProperties().put("id", albumId); // Set the ID of the album to be updated
         patchAlbumMethod.callAPIExpectSuccess();
         patchAlbumMethod.validateResponse();
-    }*/
+    }
 
 }
