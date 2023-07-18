@@ -1,7 +1,8 @@
 [
   {
-    <#if title??>"title": "${title}",</#if>
     "userId": 1,
     "id": 1
+    <#if title??>,
+    "title": "${title}"</#if>
   }
 ]
