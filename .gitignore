@@ -48,8 +48,6 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
-SolvdLabaBlock2.iml
-
 ### Custom ##
 logs
 debug

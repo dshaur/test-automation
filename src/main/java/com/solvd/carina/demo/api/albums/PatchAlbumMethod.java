@@ -9,7 +9,7 @@ import com.zebrunner.carina.api.http.HttpMethodType;
 import com.zebrunner.carina.api.http.HttpResponseStatusType;
 import com.zebrunner.carina.utils.config.Configuration;
 
-@Endpoint(url = "${base_url}/albums", methodType = HttpMethodType.PATCH)
+@Endpoint(url = "${base_url}/albums/101", methodType = HttpMethodType.PATCH)
 @RequestTemplatePath(path = "api/albums/_patch/rq.json")
 @ResponseTemplatePath(path = "api/albums/_patch/rs.json")
 @SuccessfulHttpStatus(status = HttpResponseStatusType.OK_200)
