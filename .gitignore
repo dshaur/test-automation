@@ -4,6 +4,7 @@ target/agent
 !**/src/main/**/target/
 !**/src/test/**/target/
 reports/
+reports/gallery-lib/.DS_Store
 ### IntelliJ IDEA ###
 .idea
 .idea/.gitignore
