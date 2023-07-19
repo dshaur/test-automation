@@ -66,12 +66,10 @@ public class AlbumsApiTest implements IAbstractTest {
         String postId = postResponse.jsonPath().getString("id");
         LOGGER.info(postId);
 
-        String postUrl = String.valueOf(postResponse.getHeaders().getValue("location"));
-        LOGGER.info(postUrl);
 
         // Step 3: Update the created album using PATCH call
         PatchAlbumMethod patchAlbumMethod = new PatchAlbumMethod();
-        patchAlbumMethod.replaceUrlPlaceholder("${config.env.api_url}/albums", postUrl);
+        patchAlbumMethod.replaceUrlPlaceholder("id", postId);
         patchAlbumMethod.setProperties("api/albums/album.properties");
         patchAlbumMethod.callAPIExpectSuccess();
         patchAlbumMethod.validateResponse();
