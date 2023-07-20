@@ -1,5 +1,3 @@
 {
-  "userId": "regex:[\\d]",
-  "id": "regex:[\\d]",
   "title": "regex:[a-zA-Z\\d]+"
 }

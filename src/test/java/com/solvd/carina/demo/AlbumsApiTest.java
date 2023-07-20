@@ -26,7 +26,7 @@ public class AlbumsApiTest implements IAbstractTest {
 
     @Test()
     @MethodOwner(owner = "dshaur")
-    public void testCreateAlbum() throws Exception {
+    public void testCreateAlbum() {
         PostAlbumMethod api = new PostAlbumMethod();
         api.setProperties("api/albums/album.properties");
         api.callAPIExpectSuccess();
@@ -35,7 +35,7 @@ public class AlbumsApiTest implements IAbstractTest {
 
     @Test()
     @MethodOwner(owner = "dshaur")
-    public void testCreateAlbumMissingSomeFields() throws Exception {
+    public void testCreateAlbumMissingSomeFields() {
         PostAlbumMethod api = new PostAlbumMethod();
         api.setProperties("api/albums/album.properties");
         api.getProperties().remove("title");
@@ -56,21 +56,22 @@ public class AlbumsApiTest implements IAbstractTest {
     // Test PATCH, first use POST call to create album and then use PATCH
     @Test()
     @MethodOwner(owner = "dshaur")
-    public void testPatchAlbum() throws Exception {
+    public void testPatchAlbum() {
         // Step 1: Create an album using POST call
         PostAlbumMethod postApi = new PostAlbumMethod();
         postApi.setProperties("api/albums/album.properties");
         Response postResponse = postApi.callAPIExpectSuccess();
-        postApi.validateResponse();
 
         // Step 2: Get the ID of the created album
-        String albumId = postResponse.jsonPath().getString("0.id");
-        LOGGER.info(albumId);
+        String postId = postResponse.jsonPath().getString("id");
+        LOGGER.info(postId);
+
 
         // Step 3: Update the created album using PATCH call
         PatchAlbumMethod patchAlbumMethod = new PatchAlbumMethod();
+        patchAlbumMethod.replaceUrlPlaceholder("id", postId);
         patchAlbumMethod.setProperties("api/albums/album.properties");
         patchAlbumMethod.callAPIExpectSuccess();
-        //patchAlbumMethod.validateResponse();
+        patchAlbumMethod.validateResponse();
     }
 }
