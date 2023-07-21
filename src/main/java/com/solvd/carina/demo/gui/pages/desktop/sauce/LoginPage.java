@@ -36,9 +36,5 @@ public class LoginPage extends LoginPageBase {
     public boolean isLoginErrorMessagePresent() {
         return loginErrorMessage.isElementPresent();
     }
-
-    @Override
-    public String getLoginErrorMessage() {
-        return loginErrorMessage.getText();
-    }
+    
 }

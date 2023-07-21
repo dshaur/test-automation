@@ -2,25 +2,25 @@ package com.solvd.carina.demo;
 
 import com.solvd.carina.demo.gui.pages.desktop.sauce.LoginPage;
 import com.zebrunner.carina.core.IAbstractTest;
+import com.zebrunner.carina.utils.R;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
 public class SauceWebTest implements IAbstractTest {
 
     @DataProvider(name = "loginCredentials")
     public Object[][] provideLoginCredentials() {
         return new Object[][]{
-                {"standard_user", "secret_sauce"},
-                {"locked_out_user", "secret_sauce"},
-                {"problem_user", "secret_sauce"},
-                {"performance_glitch_user", "secret_sauce"}
+                {R.TESTDATA.get("user1.name"), R.TESTDATA.get("user1.pwd"), true},
+                {R.TESTDATA.get("user2.name"), R.TESTDATA.get("user2.pwd"), false},
+                {R.TESTDATA.get("user3.name"), R.TESTDATA.get("user3.pwd"), true},
+                {R.TESTDATA.get("user4.name"), R.TESTDATA.get("user4.pwd"), true}
         };
     }
 
     @Test(dataProvider = "loginCredentials")
-    public void loginTest(String username, String password) {
+    public void loginTest(String username, String password, boolean shouldLogin) {
         // Initialize the loginPage object
         LoginPage loginPage = new LoginPage(getDriver());
 
@@ -32,18 +32,7 @@ public class SauceWebTest implements IAbstractTest {
         loginPage.login(username, password);
 
         // Validate whether login was successful or not
-        SoftAssert softAssert = new SoftAssert();
-        if (loginPage.isLoginErrorMessagePresent()) {
-            // Login failed
-            String errorMessage = loginPage.getLoginErrorMessage();
-            softAssert.fail("Login failed for user: " + username + ". Error message: " + errorMessage);
-        } else {
-            // Login successful
+        Assert.assertEquals(!loginPage.isLoginErrorMessagePresent(), shouldLogin, "asd");
 
-            // Verify that the user is redirected to the Home/InventoryPage
-            // Assert.assertTrue(inventoryPage.isPageOpened(), "Inventory page is not opened");
-        }
-
-        softAssert.assertAll();
     }
 }

@@ -16,5 +16,4 @@ public abstract class LoginPageBase extends AbstractPage {
 
     public abstract boolean isLoginErrorMessagePresent();
 
-    public abstract String getLoginErrorMessage();
 }
