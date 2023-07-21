@@ -32,7 +32,7 @@ public class SauceWebTest implements IAbstractTest {
         loginPage.login(username, password);
 
         // Validate whether login was successful or not
-        Assert.assertEquals(!loginPage.isLoginErrorMessagePresent(), shouldLogin, "asd");
+        Assert.assertEquals(!loginPage.isLoginErrorMessagePresent(), shouldLogin, "Login failed");
 
     }
 }
