@@ -22,7 +22,7 @@ public class LoginPage extends LoginPageBase {
 
     public LoginPage(WebDriver driver) {
         super(driver);
-        setPageAbsoluteURL("https://www.saucedemo.com/");
+        setPageURL("");
     }
 
     @Override
