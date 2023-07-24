@@ -33,8 +33,9 @@ public class LoginPage extends LoginPageBase {
     }
 
     @Override
-    public boolean isLoginErrorMessagePresent() {
-        return loginErrorMessage.isElementPresent();
+    public boolean isLoginErrorMessagePresent(Long timeout) {
+        return loginErrorMessage.isElementPresent(timeout);
     }
-    
+
+
 }

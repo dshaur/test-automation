@@ -14,6 +14,5 @@ public abstract class LoginPageBase extends AbstractPage {
 
     public abstract void login(String username, String password);
 
-    public abstract boolean isLoginErrorMessagePresent();
-
+    public abstract boolean isLoginErrorMessagePresent(Long timeout);
 }
