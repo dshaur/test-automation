@@ -10,4 +10,6 @@ public abstract class SearchPageBase extends AbstractPage {
 
 
     public abstract void enterSearchText(String searchText);
+
+    public abstract void selectDesiredEvent(String year, String eventName);
 }

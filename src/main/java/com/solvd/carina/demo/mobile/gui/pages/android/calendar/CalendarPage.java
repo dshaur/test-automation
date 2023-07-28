@@ -3,6 +3,7 @@ package com.solvd.carina.demo.mobile.gui.pages.android.calendar;
 import com.solvd.carina.demo.mobile.gui.pages.common.calendar.CalendarPageBase;
 import com.zebrunner.carina.utils.factory.DeviceType;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
+import com.zebrunner.carina.webdriver.decorator.PageOpeningStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
@@ -26,6 +27,8 @@ public class CalendarPage extends CalendarPageBase {
 
     public CalendarPage(WebDriver driver) {
         super(driver);
+        setPageOpeningStrategy(PageOpeningStrategy.BY_ELEMENT);
+        setUiLoadedMarker(jumpToTodayBtn);
     }
 
     @Override
@@ -49,14 +52,11 @@ public class CalendarPage extends CalendarPageBase {
     }
 
     @Override
-    public boolean isPageOpened() {
-        return jumpToTodayBtn.isElementPresent(3);
-    }
-
     public boolean isEventPresent(String eventTitle) {
         return event.format(eventTitle).isElementPresent(3);
     }
 
+    @Override
     public void selectEvent(String eventTitle) {
         event.format(eventTitle).click();
     }

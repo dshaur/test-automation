@@ -3,6 +3,7 @@ package com.solvd.carina.demo.mobile.gui.pages.android.calendar;
 import com.solvd.carina.demo.mobile.gui.pages.common.calendar.EventPageBase;
 import com.zebrunner.carina.utils.factory.DeviceType;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
+import com.zebrunner.carina.webdriver.decorator.PageOpeningStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
@@ -19,12 +20,10 @@ public class EventPage extends EventPageBase {
     private ExtendedWebElement confirmDeleteBtn;
 
     public EventPage(WebDriver driver) {
-        super(driver);
-    }
 
-    @Override
-    public boolean isPageOpened() {
-        return eventTitle.isElementPresent(3);
+        super(driver);
+        setPageOpeningStrategy(PageOpeningStrategy.BY_ELEMENT);
+        setUiLoadedMarker(eventTitle);
     }
 
     @Override

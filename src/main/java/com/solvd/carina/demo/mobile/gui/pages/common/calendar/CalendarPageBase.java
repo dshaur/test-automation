@@ -15,4 +15,8 @@ public abstract class CalendarPageBase extends AbstractPage {
     public abstract void clickCreateNewBtn();
 
     public abstract void clickSearchBtn();
+
+    public abstract boolean isEventPresent(String eventTitle);
+
+    public abstract void selectEvent(String eventTitle);
 }

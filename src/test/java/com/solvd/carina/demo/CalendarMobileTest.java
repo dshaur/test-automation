@@ -1,9 +1,9 @@
 package com.solvd.carina.demo;
 
-import com.solvd.carina.demo.mobile.gui.pages.android.calendar.CalendarPage;
-import com.solvd.carina.demo.mobile.gui.pages.android.calendar.EventCreationPage;
-import com.solvd.carina.demo.mobile.gui.pages.android.calendar.EventPage;
-import com.solvd.carina.demo.mobile.gui.pages.android.calendar.SearchPage;
+import com.solvd.carina.demo.mobile.gui.pages.common.calendar.CalendarPageBase;
+import com.solvd.carina.demo.mobile.gui.pages.common.calendar.EventCreationPageBase;
+import com.solvd.carina.demo.mobile.gui.pages.common.calendar.EventPageBase;
+import com.solvd.carina.demo.mobile.gui.pages.common.calendar.SearchPageBase;
 import com.zebrunner.carina.core.IAbstractTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -13,7 +13,7 @@ public class CalendarMobileTest implements IAbstractTest {
     // Test Case 1: Create a new event that lasts All day
     @Test
     public void eventCreationTest() {
-        CalendarPage calendarPage = new CalendarPage(getDriver());
+        CalendarPageBase calendarPage = initPage(getDriver(), CalendarPageBase.class);
         // Check if the app is opened
         Assert.assertTrue(calendarPage.isPageOpened(), "Calendar page isn't opened");
 
@@ -23,7 +23,7 @@ public class CalendarMobileTest implements IAbstractTest {
         // Choose the button to create a new event
         calendarPage.clickCreateEventBtn();
 
-        EventCreationPage eventCreationPage = new EventCreationPage(getDriver());
+        EventCreationPageBase eventCreationPage = initPage(getDriver(), EventCreationPageBase.class);
 
         // Check if the Event Creation page is opened
         Assert.assertTrue(eventCreationPage.isPageOpened(), "Calendar page isn't opened");
@@ -43,7 +43,7 @@ public class CalendarMobileTest implements IAbstractTest {
     // Test Case 2: Create a new event that lasts All day and try to delete it
     @Test
     public void deleteEventTest() {
-        CalendarPage calendarPage = new CalendarPage(getDriver());
+        CalendarPageBase calendarPage = initPage(getDriver(), CalendarPageBase.class);
         // Check if the app is opened
         Assert.assertTrue(calendarPage.isPageOpened(), "Calendar page isn't opened");
 
@@ -53,7 +53,7 @@ public class CalendarMobileTest implements IAbstractTest {
         // Choose the button to create a new event
         calendarPage.clickCreateEventBtn();
 
-        EventCreationPage eventCreationPage = new EventCreationPage(getDriver());
+        EventCreationPageBase eventCreationPage = initPage(getDriver(), EventCreationPageBase.class);
 
         // Check if the Event Creation page is opened
         Assert.assertTrue(eventCreationPage.isPageOpened(), "Calendar page isn't opened");
@@ -73,7 +73,7 @@ public class CalendarMobileTest implements IAbstractTest {
         calendarPage.selectEvent(eventTitle);
 
         // Check if the event was opened
-        EventPage eventPage = new EventPage(getDriver());
+        EventPageBase eventPage = initPage(getDriver(), EventPageBase.class);
         Assert.assertTrue(eventPage.isPageOpened(), "Event was not opened");
 
         // Delete the event
@@ -86,7 +86,7 @@ public class CalendarMobileTest implements IAbstractTest {
     // Test Case 3: Perform a search for a specific event and select from results
     @Test
     public void searchEventsTest() {
-        CalendarPage calendarPage = new CalendarPage(getDriver());
+        CalendarPageBase calendarPage = initPage(getDriver(), CalendarPageBase.class);
         // Check if the app is opened
         Assert.assertTrue(calendarPage.isPageOpened(), "Calendar page isn't opened");
 
@@ -94,7 +94,7 @@ public class CalendarMobileTest implements IAbstractTest {
         calendarPage.clickSearchBtn();
 
         // Check if the search page is opened
-        SearchPage searchPage = new SearchPage(getDriver());
+        SearchPageBase searchPage = initPage(getDriver(), SearchPageBase.class);
         Assert.assertTrue(searchPage.isPageOpened(), "Search page isn't opened");
 
         // Search and select a desired event
@@ -104,7 +104,7 @@ public class CalendarMobileTest implements IAbstractTest {
         searchPage.selectDesiredEvent(year, eventName);
 
         // Check if the event was selected
-        EventPage eventPage = new EventPage(getDriver());
+        EventPageBase eventPage = initPage(getDriver(), EventPageBase.class);
         Assert.assertTrue(eventPage.isPageOpened(), "Event was not opened");
         Assert.assertEquals(eventPage.getEventTitle(), eventName, "Event was not selected");
 
