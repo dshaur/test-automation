@@ -10,5 +10,5 @@ public abstract class EventPageBase extends AbstractPage {
 
     public abstract void deleteEvent();
 
-    public abstract boolean isEventPresent(String eventName);
+    public abstract String getEventTitle();
 }

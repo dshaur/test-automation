@@ -35,7 +35,7 @@ public class EventPage extends EventPageBase {
     }
 
     @Override
-    public boolean isEventPresent(String eventName) {
-        return eventTitle.getText().equals(eventName);
+    public String getEventTitle() {
+        return eventTitle.getText();
     }
 }

@@ -106,7 +106,7 @@ public class CalendarMobileTest implements IAbstractTest {
         // Check if the event was selected
         EventPage eventPage = new EventPage(getDriver());
         Assert.assertTrue(eventPage.isPageOpened(), "Event was not opened");
-        Assert.assertTrue(eventPage.isEventPresent(eventName), "Event wasn't found");
+        Assert.assertEquals(eventPage.getEventTitle(), eventName, "Event was not selected");
 
     }
 }
