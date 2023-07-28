@@ -47,7 +47,7 @@ public class CalendarMobileTest implements IAbstractTest {
         // Check if the app is opened
         Assert.assertTrue(calendarPage.isPageOpened(), "Calendar page isn't opened");
 
-        // Click the create new button
+        // Click the create new button ('+')
         calendarPage.clickCreateNewBtn();
 
         // Choose the button to create a new event

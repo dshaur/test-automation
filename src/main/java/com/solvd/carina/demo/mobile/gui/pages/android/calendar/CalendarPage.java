@@ -50,11 +50,11 @@ public class CalendarPage extends CalendarPageBase {
 
     @Override
     public boolean isPageOpened() {
-        return jumpToTodayBtn.isElementPresent();
+        return jumpToTodayBtn.isElementPresent(3);
     }
 
     public boolean isEventPresent(String eventTitle) {
-        return event.format(eventTitle).isElementPresent();
+        return event.format(eventTitle).isElementPresent(3);
     }
 
     public void selectEvent(String eventTitle) {

@@ -24,7 +24,7 @@ public class EventPage extends EventPageBase {
 
     @Override
     public boolean isPageOpened() {
-        return eventTitle.isElementPresent();
+        return eventTitle.isElementPresent(3);
     }
 
     @Override

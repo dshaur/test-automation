@@ -12,7 +12,7 @@ import org.openqa.selenium.support.FindBy;
 @DeviceType(pageType = DeviceType.Type.ANDROID_PHONE, parentClass = SearchPageBase.class)
 public class SearchPage extends SearchPageBase {
 
-    @FindBy(xpath = "//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.EditText")
+    @FindBy(xpath = "//android.widget.EditText[@text=\"Search\"]")
     private ExtendedWebElement searchBar;
 
     @FindBy(xpath = "//android.view.View[@content-desc=\"%s\"]/following-sibling::android.view.View[@content-desc=\"%s, All day: \"]")
@@ -24,7 +24,7 @@ public class SearchPage extends SearchPageBase {
 
     @Override
     public boolean isPageOpened() {
-        return searchBar.isElementPresent();
+        return searchBar.isElementPresent(3);
     }
 
     @Override

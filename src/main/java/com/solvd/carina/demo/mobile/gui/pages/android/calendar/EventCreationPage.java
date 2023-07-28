@@ -24,7 +24,7 @@ public class EventCreationPage extends EventCreationPageBase {
 
     @Override
     public boolean isPageOpened() {
-        return title.isElementPresent();
+        return title.isElementPresent(3);
     }
 
     @Override
