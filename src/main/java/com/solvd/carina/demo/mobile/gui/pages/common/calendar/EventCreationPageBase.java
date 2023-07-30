@@ -8,9 +8,22 @@ public abstract class EventCreationPageBase extends AbstractPage {
         super(driver);
     }
 
+    public abstract String getEventTitle();
+
+    public abstract String getEventColor();
+
+    public abstract String getEventDescription();
+
     public abstract void enterTitle(String eventTitle);
 
     public abstract void clickSwitchBtn();
 
+    public abstract void clickEventColor();
+
+    public abstract void selectDesiredColor(String color);
+
+    public abstract void changeEventDescription(String description);
+
     public abstract void clickSaveBtn();
+
 }

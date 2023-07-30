@@ -18,5 +18,13 @@ public abstract class CalendarPageBase extends AbstractPage {
 
     public abstract boolean isEventPresent(String eventTitle);
 
+    public abstract boolean isEventPresent(String eventTitle, String color);
+
     public abstract void selectEvent(String eventTitle);
+
+    public abstract void clickCancel();
+
+    public abstract void scrollToEvent(String eventTitle);
+
+    public abstract boolean checkCurrentDate(String date);
 }

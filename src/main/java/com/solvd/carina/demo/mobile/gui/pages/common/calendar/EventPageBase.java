@@ -10,5 +10,7 @@ public abstract class EventPageBase extends AbstractPage {
 
     public abstract void deleteEvent();
 
+    public abstract void clickEditBtn();
+
     public abstract String getEventTitle();
 }

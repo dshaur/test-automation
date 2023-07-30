@@ -18,6 +18,8 @@ public class EventPage extends EventPageBase {
     private ExtendedWebElement deleteBtn;
     @FindBy(id = "android:id/button1")
     private ExtendedWebElement confirmDeleteBtn;
+    @FindBy(id = "com.google.android.calendar:id/info_action_edit_hit")
+    private ExtendedWebElement editBtn;
 
     public EventPage(WebDriver driver) {
 
@@ -31,6 +33,11 @@ public class EventPage extends EventPageBase {
         moreOptionsBtn.click();
         deleteBtn.click();
         confirmDeleteBtn.click();
+    }
+
+    @Override
+    public void clickEditBtn() {
+        editBtn.click();
     }
 
     @Override
