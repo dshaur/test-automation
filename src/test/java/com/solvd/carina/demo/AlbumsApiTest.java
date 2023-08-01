@@ -64,7 +64,6 @@ public class AlbumsApiTest implements IAbstractTest {
 
         // Step 2: Get the ID of the created album
         String postId = postResponse.jsonPath().getString("id");
-        LOGGER.info(postId);
 
 
         // Step 3: Update the created album using PATCH call
