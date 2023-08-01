@@ -3,7 +3,6 @@ package com.solvd.carina.demo.mobile.gui.pages.android.calendar;
 import com.solvd.carina.demo.mobile.gui.pages.common.calendar.SearchPageBase;
 import com.zebrunner.carina.utils.factory.DeviceType;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
-import com.zebrunner.carina.webdriver.decorator.PageOpeningStrategy;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -21,7 +20,6 @@ public class SearchPage extends SearchPageBase {
 
     public SearchPage(WebDriver driver) {
         super(driver);
-        setPageOpeningStrategy(PageOpeningStrategy.BY_ELEMENT);
         setUiLoadedMarker(searchBar);
     }
 

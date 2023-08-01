@@ -3,7 +3,6 @@ package com.solvd.carina.demo.mobile.gui.pages.android.calendar;
 import com.solvd.carina.demo.mobile.gui.pages.common.calendar.EventPageBase;
 import com.zebrunner.carina.utils.factory.DeviceType;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
-import com.zebrunner.carina.webdriver.decorator.PageOpeningStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
@@ -24,7 +23,6 @@ public class EventPage extends EventPageBase {
     public EventPage(WebDriver driver) {
 
         super(driver);
-        setPageOpeningStrategy(PageOpeningStrategy.BY_ELEMENT);
         setUiLoadedMarker(eventTitle);
     }
 
