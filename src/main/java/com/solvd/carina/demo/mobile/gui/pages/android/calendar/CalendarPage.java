@@ -83,7 +83,6 @@ public class CalendarPage extends CalendarPageBase implements IMobileUtils {
     @Override
     public void scrollToEvent(String eventTitle) {
         swipe(event.format(eventTitle));
-        pause(5);
     }
 
     @Override
